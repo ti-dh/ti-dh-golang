@@ -17,9 +17,9 @@ $client_number = mt_rand( 100000, 999999 );
 // 1、第一步，获取服务器的p、g和server_number
 $ret = $curl->get( $api_host.'init' );
 $ret = json_decode( $ret, true );
-$p = $ret['P'];
-$g = $ret['G'];
-$server_number = $ret['ProcessedServerNumber'];
+$p = $ret['p'];
+$g = $ret['g'];
+$server_number = $ret['processedServerNumber'];
 //specho( $ret );
 
 // 2、第二步，根据服务器获取到的数据计算出client-number
